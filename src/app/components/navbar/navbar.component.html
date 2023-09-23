@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="index.html">
+        <img src="../../../assets/img/LOGO CODE MAKERS. VARIACIONpng.png" alt="logo" width="190" height="50">
+    </a>
+    <button [ngSwitch]="isNavbarOpen" class="navbar-toggler border-0" type="button" data-toggle="collapse"
+        data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"
+        (click)="toggleNavbar()">
+        <i *ngSwitchCase="false" class="fa-solid fa-bars"></i>
+        <i *ngSwitchCase="true" class="fa-solid fa-x"></i>
+    </button>
+
+    <div [ngClass]="{'collapse navbar-collapse text-center': !isNavbarOpen, 'show': isNavbarOpen}" id="navbar">
+        <ul class="navbar-nav ml-auto mx-auto">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="home" routerLinkActive="active">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="services" routerLinkActive="active">Servicios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="team" routerLinkActive="active">Equipo</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="contact" routerLinkActive="active">Contacto</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="about" routerLinkActive="active">Acerca de</a>
+            </li>
+        </ul>
+    </div>
+</nav>
