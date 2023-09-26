@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import * as $ from 'jquery'
+
 @Component({
   selector: 'navbar',
   templateUrl: './navbar.component.html',
@@ -7,10 +9,23 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
-  isNavbarOpen = false; 
+  isNavbarOpen = false;
+
+  constructor() {
+    // Asegúrate de que el elemento .navigation exista en tu HTML
+    const navigationElement = $('.navigation');
+
+    // Agrega una clase 'nav-bg' cuando se desplaza la ventana
+    $(window).scroll(() => {
+      if (navigationElement.offset()!.top > 100) {
+        navigationElement.addClass('nav-bg');
+      } else {
+        navigationElement.removeClass('nav-bg');
+      }
+    });
+  }
 
   toggleNavbar() {
     this.isNavbarOpen = !this.isNavbarOpen;
   }
-
 }
