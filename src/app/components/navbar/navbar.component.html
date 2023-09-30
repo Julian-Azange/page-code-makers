@@ -8,9 +8,8 @@
         <i *ngSwitchCase="false" class="fa-solid fa-bars"></i>
         <i *ngSwitchCase="true" class="fa-solid fa-x"></i>
     </button>
-
-    <div [ngClass]="{'collapse navbar-collapse text-center': !isNavbarOpen, 'show': isNavbarOpen}" id="navbar">
-        <ul class="navbar-nav ml-auto mx-auto">
+    <div class="collapse navbar-collapse text-center show" id="navbarNav">
+        <ul class="navbar-nav ml-auto mx-auto links">
             <li class="nav-item">
                 <a class="nav-link" routerLink="home" routerLinkActive="active">Inicio</a>
             </li>
@@ -28,4 +27,26 @@
             </li>
         </ul>
     </div>
+
+    <div [ngClass]="{'collapse navbar-collapse links': !isNavbarOpen, 'show': isNavbarOpen}"
+        id="navbarNav2">
+        <ul class="navbar-nav ml-auto mx-auto text-center w-100">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="home" routerLinkActive="active">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="services" routerLinkActive="active">Servicios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="team" routerLinkActive="active">Equipo</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="contact" routerLinkActive="active">Contacto</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="about" routerLinkActive="active">Acerca de</a>
+            </li>
+        </ul>
+    </div>
+
 </nav>

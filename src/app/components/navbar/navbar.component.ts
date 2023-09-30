@@ -9,7 +9,7 @@ import * as $ from 'jquery'
 })
 export class NavbarComponent {
 
-  isNavbarOpen = false;
+  
 
   constructor() {
     // Asegúrate de que el elemento .navigation exista en tu HTML
@@ -24,6 +24,8 @@ export class NavbarComponent {
       }
     });
   }
+  
+  isNavbarOpen = false;
 
   toggleNavbar() {
     this.isNavbarOpen = !this.isNavbarOpen;
