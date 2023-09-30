@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 
 import * as $ from 'jquery'
 
@@ -11,7 +11,7 @@ export class NavbarComponent {
 
   
 
-  constructor() {
+  constructor(private renderer: Renderer2) {
     // Asegúrate de que el elemento .navigation exista en tu HTML
     const navigationElement = $('.navigation');
 
@@ -30,4 +30,12 @@ export class NavbarComponent {
   toggleNavbar() {
     this.isNavbarOpen = !this.isNavbarOpen;
   }
+  
+
+  isMenuOpen = false;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+  
 }
