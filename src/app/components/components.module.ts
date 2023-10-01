@@ -8,6 +8,7 @@ import { ServicesAreaComponent } from './services-area/services-area.component';
 import { TeamAreaComponent } from './team-area/team-area.component';
 import { CardServiceComponent } from './card-service/card-service.component';
 import { CardTeamComponent } from './card-team/card-team.component';
+import { SliderAreaComponent } from './slider-area/slider-area.component';
 
 
 
@@ -20,7 +21,8 @@ import { CardTeamComponent } from './card-team/card-team.component';
     ServicesAreaComponent,
     TeamAreaComponent,
     CardServiceComponent,
-    CardTeamComponent
+    CardTeamComponent,
+    SliderAreaComponent,
   ],
   imports: [
     CommonModule,

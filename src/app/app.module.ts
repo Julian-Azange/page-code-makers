@@ -18,6 +18,7 @@ import { ServicesAreaComponent } from './components/services-area/services-area.
 import { TeamAreaComponent } from './components/team-area/team-area.component';
 import { CardServiceComponent } from './components/card-service/card-service.component';
 import { CardTeamComponent } from './components/card-team/card-team.component';
+import { SliderAreaComponent } from './components/slider-area/slider-area.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { CardTeamComponent } from './components/card-team/card-team.component';
     HeroAreaComponent,
     ServicesAreaComponent,
     TeamAreaComponent,
+    SliderAreaComponent,
     CardServiceComponent,
     CardTeamComponent,
     HomePageComponent,

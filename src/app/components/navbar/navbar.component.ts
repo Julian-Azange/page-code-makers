@@ -9,13 +9,11 @@ import * as $ from 'jquery'
 })
 export class NavbarComponent {
 
-  
 
-  constructor(private renderer: Renderer2) {
-    // Asegúrate de que el elemento .navigation exista en tu HTML
+
+  constructor() {
     const navigationElement = $('.navigation');
 
-    // Agrega una clase 'nav-bg' cuando se desplaza la ventana
     $(window).scroll(() => {
       if (navigationElement.offset()!.top > 100) {
         navigationElement.addClass('nav-bg');
@@ -24,18 +22,11 @@ export class NavbarComponent {
       }
     });
   }
-  
+
   isNavbarOpen = false;
 
   toggleNavbar() {
     this.isNavbarOpen = !this.isNavbarOpen;
   }
-  
 
-  isMenuOpen = false;
-
-  toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen;
-  }
-  
 }
